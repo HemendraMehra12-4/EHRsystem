@@ -98,27 +98,27 @@
     },
     "deployedBytecode": {
       "functionDebugData": {
-        "@checkUser_359": {
+        "@checkUser_408": {
           "entryPoint": 254,
-          "id": 359,
+          "id": 408,
           "parameterSlots": 1,
           "returnSlots": 1
         },
-        "@getUserRole_479": {
+        "@getUserRole_528": {
           "entryPoint": 1236,
-          "id": 479,
+          "id": 528,
           "parameterSlots": 1,
           "returnSlots": 1
         },
-        "@registerUser_457": {
+        "@registerUser_506": {
           "entryPoint": 298,
-          "id": 457,
+          "id": 506,
           "parameterSlots": 2,
           "returnSlots": 0
         },
-        "@users_346": {
+        "@users_395": {
           "entryPoint": 1378,
-          "id": 346,
+          "id": 395,
           "parameterSlots": 0,
           "returnSlots": 0
         },
@@ -158,7 +158,7 @@
           "parameterSlots": 2,
           "returnSlots": 0
         },
-        "abi_encode_t_enum$_Role_$335_to_t_uint8_fromStack": {
+        "abi_encode_t_enum$_Role_$384_to_t_uint8_fromStack": {
           "entryPoint": 2135,
           "id": null,
           "parameterSlots": 2,
@@ -200,13 +200,13 @@
           "parameterSlots": 2,
           "returnSlots": 1
         },
-        "abi_encode_tuple_t_enum$_Role_$335__to_t_uint8__fromStack_reversed": {
+        "abi_encode_tuple_t_enum$_Role_$384__to_t_uint8__fromStack_reversed": {
           "entryPoint": 2150,
           "id": null,
           "parameterSlots": 2,
           "returnSlots": 1
         },
-        "abi_encode_tuple_t_enum$_Role_$335_t_bool__to_t_uint8_t_bool__fromStack_reversed": {
+        "abi_encode_tuple_t_enum$_Role_$384_t_bool__to_t_uint8_t_bool__fromStack_reversed": {
           "entryPoint": 2177,
           "id": null,
           "parameterSlots": 3,
@@ -278,13 +278,13 @@
           "parameterSlots": 1,
           "returnSlots": 1
         },
-        "cleanup_t_enum$_Role_$335": {
+        "cleanup_t_enum$_Role_$384": {
           "entryPoint": 2098,
           "id": null,
           "parameterSlots": 1,
           "returnSlots": 1
         },
-        "convert_t_enum$_Role_$335_to_t_uint8": {
+        "convert_t_enum$_Role_$384_to_t_uint8": {
           "entryPoint": 2117,
           "id": null,
           "parameterSlots": 1,
@@ -368,7 +368,7 @@
           "parameterSlots": 1,
           "returnSlots": 0
         },
-        "validator_assert_t_enum$_Role_$335": {
+        "validator_assert_t_enum$_Role_$384": {
           "entryPoint": 2078,
           "id": null,
           "parameterSlots": 1,
@@ -2802,7 +2802,7 @@
                     }
                   ]
                 },
-                "name": "validator_assert_t_enum$_Role_$335",
+                "name": "validator_assert_t_enum$_Role_$384",
                 "nodeType": "YulFunctionDefinition",
                 "parameters": [
                   {
@@ -2845,7 +2845,7 @@
                           }
                         ],
                         "functionName": {
-                          "name": "validator_assert_t_enum$_Role_$335",
+                          "name": "validator_assert_t_enum$_Role_$384",
                           "nodeType": "YulIdentifier",
                           "src": "4711:34:4"
                         },
@@ -2857,7 +2857,7 @@
                     }
                   ]
                 },
-                "name": "cleanup_t_enum$_Role_$335",
+                "name": "cleanup_t_enum$_Role_$384",
                 "nodeType": "YulFunctionDefinition",
                 "parameters": [
                   {
@@ -2894,7 +2894,7 @@
                           }
                         ],
                         "functionName": {
-                          "name": "cleanup_t_enum$_Role_$335",
+                          "name": "cleanup_t_enum$_Role_$384",
                           "nodeType": "YulIdentifier",
                           "src": "4853:25:4"
                         },
@@ -2911,7 +2911,7 @@
                     }
                   ]
                 },
-                "name": "convert_t_enum$_Role_$335_to_t_uint8",
+                "name": "convert_t_enum$_Role_$384_to_t_uint8",
                 "nodeType": "YulFunctionDefinition",
                 "parameters": [
                   {
@@ -2953,7 +2953,7 @@
                               }
                             ],
                             "functionName": {
-                              "name": "convert_t_enum$_Role_$335_to_t_uint8",
+                              "name": "convert_t_enum$_Role_$384_to_t_uint8",
                               "nodeType": "YulIdentifier",
                               "src": "4990:36:4"
                             },
@@ -2974,7 +2974,7 @@
                     }
                   ]
                 },
-                "name": "abi_encode_t_enum$_Role_$335_to_t_uint8_fromStack",
+                "name": "abi_encode_t_enum$_Role_$384_to_t_uint8_fromStack",
                 "nodeType": "YulFunctionDefinition",
                 "parameters": [
                   {
@@ -3064,7 +3064,7 @@
                           }
                         ],
                         "functionName": {
-                          "name": "abi_encode_t_enum$_Role_$335_to_t_uint8_fromStack",
+                          "name": "abi_encode_t_enum$_Role_$384_to_t_uint8_fromStack",
                           "nodeType": "YulIdentifier",
                           "src": "5196:49:4"
                         },
@@ -3076,7 +3076,7 @@
                     }
                   ]
                 },
-                "name": "abi_encode_tuple_t_enum$_Role_$335__to_t_uint8__fromStack_reversed",
+                "name": "abi_encode_tuple_t_enum$_Role_$384__to_t_uint8__fromStack_reversed",
                 "nodeType": "YulFunctionDefinition",
                 "parameters": [
                   {
@@ -3174,7 +3174,7 @@
                           }
                         ],
                         "functionName": {
-                          "name": "abi_encode_t_enum$_Role_$335_to_t_uint8_fromStack",
+                          "name": "abi_encode_t_enum$_Role_$384_to_t_uint8_fromStack",
                           "nodeType": "YulIdentifier",
                           "src": "5458:49:4"
                         },
@@ -3229,7 +3229,7 @@
                     }
                   ]
                 },
-                "name": "abi_encode_tuple_t_enum$_Role_$335_t_bool__to_t_uint8_t_bool__fromStack_reversed",
+                "name": "abi_encode_tuple_t_enum$_Role_$384_t_bool__to_t_uint8_t_bool__fromStack_reversed",
                 "nodeType": "YulFunctionDefinition",
                 "parameters": [
                   {
@@ -4961,7 +4961,7 @@
               }
             ]
           },
-          "contents": "{\n\n    function allocate_unbounded() -> memPtr {\n        memPtr := mload(64)\n    }\n\n    function revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() {\n        revert(0, 0)\n    }\n\n    function revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() {\n        revert(0, 0)\n    }\n\n    function cleanup_t_bytes32(value) -> cleaned {\n        cleaned := value\n    }\n\n    function validator_revert_t_bytes32(value) {\n        if iszero(eq(value, cleanup_t_bytes32(value))) { revert(0, 0) }\n    }\n\n    function abi_decode_t_bytes32(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_bytes32(value)\n    }\n\n    function abi_decode_tuple_t_bytes32(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_bytes32(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function cleanup_t_bool(value) -> cleaned {\n        cleaned := iszero(iszero(value))\n    }\n\n    function abi_encode_t_bool_to_t_bool_fromStack(value, pos) {\n        mstore(pos, cleanup_t_bool(value))\n    }\n\n    function abi_encode_tuple_t_bool__to_t_bool__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_bool_to_t_bool_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d() {\n        revert(0, 0)\n    }\n\n    function revert_error_987264b3b1d58a9c7f8255e93e81c77d86d6299019c33110a076957a3e06e2ae() {\n        revert(0, 0)\n    }\n\n    function round_up_to_mul_of_32(value) -> result {\n        result := and(add(value, 31), not(31))\n    }\n\n    function panic_error_0x41() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x41)\n        revert(0, 0x24)\n    }\n\n    function finalize_allocation(memPtr, size) {\n        let newFreePtr := add(memPtr, round_up_to_mul_of_32(size))\n        // protect against overflow\n        if or(gt(newFreePtr, 0xffffffffffffffff), lt(newFreePtr, memPtr)) { panic_error_0x41() }\n        mstore(64, newFreePtr)\n    }\n\n    function allocate_memory(size) -> memPtr {\n        memPtr := allocate_unbounded()\n        finalize_allocation(memPtr, size)\n    }\n\n    function array_allocation_size_t_string_memory_ptr(length) -> size {\n        // Make sure we can allocate memory without overflow\n        if gt(length, 0xffffffffffffffff) { panic_error_0x41() }\n\n        size := round_up_to_mul_of_32(length)\n\n        // add length slot\n        size := add(size, 0x20)\n\n    }\n\n    function copy_calldata_to_memory(src, dst, length) {\n        calldatacopy(dst, src, length)\n        // clear end\n        mstore(add(dst, length), 0)\n    }\n\n    function abi_decode_available_length_t_string_memory_ptr(src, length, end) -> array {\n        array := allocate_memory(array_allocation_size_t_string_memory_ptr(length))\n        mstore(array, length)\n        let dst := add(array, 0x20)\n        if gt(add(src, length), end) { revert_error_987264b3b1d58a9c7f8255e93e81c77d86d6299019c33110a076957a3e06e2ae() }\n        copy_calldata_to_memory(src, dst, length)\n    }\n\n    // string\n    function abi_decode_t_string_memory_ptr(offset, end) -> array {\n        if iszero(slt(add(offset, 0x1f), end)) { revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d() }\n        let length := calldataload(offset)\n        array := abi_decode_available_length_t_string_memory_ptr(add(offset, 0x20), length, end)\n    }\n\n    function abi_decode_tuple_t_bytes32t_string_memory_ptr(headStart, dataEnd) -> value0, value1 {\n        if slt(sub(dataEnd, headStart), 64) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_bytes32(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := calldataload(add(headStart, 32))\n            if gt(offset, 0xffffffffffffffff) { revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() }\n\n            value1 := abi_decode_t_string_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function panic_error_0x21() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x21)\n        revert(0, 0x24)\n    }\n\n    function validator_assert_t_enum$_Role_$335(value) {\n        if iszero(lt(value, 4)) { panic_error_0x21() }\n    }\n\n    function cleanup_t_enum$_Role_$335(value) -> cleaned {\n        cleaned := value validator_assert_t_enum$_Role_$335(value)\n    }\n\n    function convert_t_enum$_Role_$335_to_t_uint8(value) -> converted {\n        converted := cleanup_t_enum$_Role_$335(value)\n    }\n\n    function abi_encode_t_enum$_Role_$335_to_t_uint8_fromStack(value, pos) {\n        mstore(pos, convert_t_enum$_Role_$335_to_t_uint8(value))\n    }\n\n    function abi_encode_tuple_t_enum$_Role_$335__to_t_uint8__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_enum$_Role_$335_to_t_uint8_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function abi_encode_tuple_t_enum$_Role_$335_t_bool__to_t_uint8_t_bool__fromStack_reversed(headStart , value1, value0) -> tail {\n        tail := add(headStart, 64)\n\n        abi_encode_t_enum$_Role_$335_to_t_uint8_fromStack(value0,  add(headStart, 0))\n\n        abi_encode_t_bool_to_t_bool_fromStack(value1,  add(headStart, 32))\n\n    }\n\n    function array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function store_literal_in_memory_bf2766e8d508f9848062d9281df8bb359976bd033f04b025fa8b4dc8207193b3(memPtr) {\n\n        mstore(add(memPtr, 0), \"User already registered!\")\n\n    }\n\n    function abi_encode_t_stringliteral_bf2766e8d508f9848062d9281df8bb359976bd033f04b025fa8b4dc8207193b3_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 24)\n        store_literal_in_memory_bf2766e8d508f9848062d9281df8bb359976bd033f04b025fa8b4dc8207193b3(pos)\n        end := add(pos, 32)\n    }\n\n    function abi_encode_tuple_t_stringliteral_bf2766e8d508f9848062d9281df8bb359976bd033f04b025fa8b4dc8207193b3__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_bf2766e8d508f9848062d9281df8bb359976bd033f04b025fa8b4dc8207193b3_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function array_length_t_string_memory_ptr(value) -> length {\n\n        length := mload(value)\n\n    }\n\n    function array_storeLengthForEncoding_t_string_memory_ptr_nonPadded_inplace_fromStack(pos, length) -> updated_pos {\n        updated_pos := pos\n    }\n\n    function copy_memory_to_memory(src, dst, length) {\n        let i := 0\n        for { } lt(i, length) { i := add(i, 32) }\n        {\n            mstore(add(dst, i), mload(add(src, i)))\n        }\n        if gt(i, length)\n        {\n            // clear end\n            mstore(add(dst, length), 0)\n        }\n    }\n\n    function abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_nonPadded_inplace_fromStack(value, pos) -> end {\n        let length := array_length_t_string_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_nonPadded_inplace_fromStack(pos, length)\n        copy_memory_to_memory(add(value, 0x20), pos, length)\n        end := add(pos, length)\n    }\n\n    function abi_encode_tuple_packed_t_string_memory_ptr__to_t_string_memory_ptr__nonPadded_inplace_fromStack_reversed(pos , value0) -> end {\n\n        pos := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_nonPadded_inplace_fromStack(value0,  pos)\n\n        end := pos\n    }\n\n    function store_literal_in_memory_935b2e89f8610554b23e74d8a5902698594c3e73cc3a76fa75f873ff641cbe46(memPtr) {\n\n        mstore(add(memPtr, 0), \"Invalid role!\")\n\n    }\n\n    function abi_encode_t_stringliteral_935b2e89f8610554b23e74d8a5902698594c3e73cc3a76fa75f873ff641cbe46_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 13)\n        store_literal_in_memory_935b2e89f8610554b23e74d8a5902698594c3e73cc3a76fa75f873ff641cbe46(pos)\n        end := add(pos, 32)\n    }\n\n    function abi_encode_tuple_t_stringliteral_935b2e89f8610554b23e74d8a5902698594c3e73cc3a76fa75f873ff641cbe46__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_935b2e89f8610554b23e74d8a5902698594c3e73cc3a76fa75f873ff641cbe46_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function store_literal_in_memory_263f68979ab8493dfb876baf1251b5bb5d13d94765abbd21388b0d254d48747c(memPtr) {\n\n        mstore(add(memPtr, 0), \"User not registered\")\n\n    }\n\n    function abi_encode_t_stringliteral_263f68979ab8493dfb876baf1251b5bb5d13d94765abbd21388b0d254d48747c_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 19)\n        store_literal_in_memory_263f68979ab8493dfb876baf1251b5bb5d13d94765abbd21388b0d254d48747c(pos)\n        end := add(pos, 32)\n    }\n\n    function abi_encode_tuple_t_stringliteral_263f68979ab8493dfb876baf1251b5bb5d13d94765abbd21388b0d254d48747c__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_263f68979ab8493dfb876baf1251b5bb5d13d94765abbd21388b0d254d48747c_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n}\n",
+          "contents": "{\n\n    function allocate_unbounded() -> memPtr {\n        memPtr := mload(64)\n    }\n\n    function revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() {\n        revert(0, 0)\n    }\n\n    function revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() {\n        revert(0, 0)\n    }\n\n    function cleanup_t_bytes32(value) -> cleaned {\n        cleaned := value\n    }\n\n    function validator_revert_t_bytes32(value) {\n        if iszero(eq(value, cleanup_t_bytes32(value))) { revert(0, 0) }\n    }\n\n    function abi_decode_t_bytes32(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_bytes32(value)\n    }\n\n    function abi_decode_tuple_t_bytes32(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_bytes32(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function cleanup_t_bool(value) -> cleaned {\n        cleaned := iszero(iszero(value))\n    }\n\n    function abi_encode_t_bool_to_t_bool_fromStack(value, pos) {\n        mstore(pos, cleanup_t_bool(value))\n    }\n\n    function abi_encode_tuple_t_bool__to_t_bool__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_bool_to_t_bool_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d() {\n        revert(0, 0)\n    }\n\n    function revert_error_987264b3b1d58a9c7f8255e93e81c77d86d6299019c33110a076957a3e06e2ae() {\n        revert(0, 0)\n    }\n\n    function round_up_to_mul_of_32(value) -> result {\n        result := and(add(value, 31), not(31))\n    }\n\n    function panic_error_0x41() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x41)\n        revert(0, 0x24)\n    }\n\n    function finalize_allocation(memPtr, size) {\n        let newFreePtr := add(memPtr, round_up_to_mul_of_32(size))\n        // protect against overflow\n        if or(gt(newFreePtr, 0xffffffffffffffff), lt(newFreePtr, memPtr)) { panic_error_0x41() }\n        mstore(64, newFreePtr)\n    }\n\n    function allocate_memory(size) -> memPtr {\n        memPtr := allocate_unbounded()\n        finalize_allocation(memPtr, size)\n    }\n\n    function array_allocation_size_t_string_memory_ptr(length) -> size {\n        // Make sure we can allocate memory without overflow\n        if gt(length, 0xffffffffffffffff) { panic_error_0x41() }\n\n        size := round_up_to_mul_of_32(length)\n\n        // add length slot\n        size := add(size, 0x20)\n\n    }\n\n    function copy_calldata_to_memory(src, dst, length) {\n        calldatacopy(dst, src, length)\n        // clear end\n        mstore(add(dst, length), 0)\n    }\n\n    function abi_decode_available_length_t_string_memory_ptr(src, length, end) -> array {\n        array := allocate_memory(array_allocation_size_t_string_memory_ptr(length))\n        mstore(array, length)\n        let dst := add(array, 0x20)\n        if gt(add(src, length), end) { revert_error_987264b3b1d58a9c7f8255e93e81c77d86d6299019c33110a076957a3e06e2ae() }\n        copy_calldata_to_memory(src, dst, length)\n    }\n\n    // string\n    function abi_decode_t_string_memory_ptr(offset, end) -> array {\n        if iszero(slt(add(offset, 0x1f), end)) { revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d() }\n        let length := calldataload(offset)\n        array := abi_decode_available_length_t_string_memory_ptr(add(offset, 0x20), length, end)\n    }\n\n    function abi_decode_tuple_t_bytes32t_string_memory_ptr(headStart, dataEnd) -> value0, value1 {\n        if slt(sub(dataEnd, headStart), 64) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_bytes32(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := calldataload(add(headStart, 32))\n            if gt(offset, 0xffffffffffffffff) { revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() }\n\n            value1 := abi_decode_t_string_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function panic_error_0x21() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x21)\n        revert(0, 0x24)\n    }\n\n    function validator_assert_t_enum$_Role_$384(value) {\n        if iszero(lt(value, 4)) { panic_error_0x21() }\n    }\n\n    function cleanup_t_enum$_Role_$384(value) -> cleaned {\n        cleaned := value validator_assert_t_enum$_Role_$384(value)\n    }\n\n    function convert_t_enum$_Role_$384_to_t_uint8(value) -> converted {\n        converted := cleanup_t_enum$_Role_$384(value)\n    }\n\n    function abi_encode_t_enum$_Role_$384_to_t_uint8_fromStack(value, pos) {\n        mstore(pos, convert_t_enum$_Role_$384_to_t_uint8(value))\n    }\n\n    function abi_encode_tuple_t_enum$_Role_$384__to_t_uint8__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_enum$_Role_$384_to_t_uint8_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function abi_encode_tuple_t_enum$_Role_$384_t_bool__to_t_uint8_t_bool__fromStack_reversed(headStart , value1, value0) -> tail {\n        tail := add(headStart, 64)\n\n        abi_encode_t_enum$_Role_$384_to_t_uint8_fromStack(value0,  add(headStart, 0))\n\n        abi_encode_t_bool_to_t_bool_fromStack(value1,  add(headStart, 32))\n\n    }\n\n    function array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function store_literal_in_memory_bf2766e8d508f9848062d9281df8bb359976bd033f04b025fa8b4dc8207193b3(memPtr) {\n\n        mstore(add(memPtr, 0), \"User already registered!\")\n\n    }\n\n    function abi_encode_t_stringliteral_bf2766e8d508f9848062d9281df8bb359976bd033f04b025fa8b4dc8207193b3_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 24)\n        store_literal_in_memory_bf2766e8d508f9848062d9281df8bb359976bd033f04b025fa8b4dc8207193b3(pos)\n        end := add(pos, 32)\n    }\n\n    function abi_encode_tuple_t_stringliteral_bf2766e8d508f9848062d9281df8bb359976bd033f04b025fa8b4dc8207193b3__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_bf2766e8d508f9848062d9281df8bb359976bd033f04b025fa8b4dc8207193b3_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function array_length_t_string_memory_ptr(value) -> length {\n\n        length := mload(value)\n\n    }\n\n    function array_storeLengthForEncoding_t_string_memory_ptr_nonPadded_inplace_fromStack(pos, length) -> updated_pos {\n        updated_pos := pos\n    }\n\n    function copy_memory_to_memory(src, dst, length) {\n        let i := 0\n        for { } lt(i, length) { i := add(i, 32) }\n        {\n            mstore(add(dst, i), mload(add(src, i)))\n        }\n        if gt(i, length)\n        {\n            // clear end\n            mstore(add(dst, length), 0)\n        }\n    }\n\n    function abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_nonPadded_inplace_fromStack(value, pos) -> end {\n        let length := array_length_t_string_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_nonPadded_inplace_fromStack(pos, length)\n        copy_memory_to_memory(add(value, 0x20), pos, length)\n        end := add(pos, length)\n    }\n\n    function abi_encode_tuple_packed_t_string_memory_ptr__to_t_string_memory_ptr__nonPadded_inplace_fromStack_reversed(pos , value0) -> end {\n\n        pos := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_nonPadded_inplace_fromStack(value0,  pos)\n\n        end := pos\n    }\n\n    function store_literal_in_memory_935b2e89f8610554b23e74d8a5902698594c3e73cc3a76fa75f873ff641cbe46(memPtr) {\n\n        mstore(add(memPtr, 0), \"Invalid role!\")\n\n    }\n\n    function abi_encode_t_stringliteral_935b2e89f8610554b23e74d8a5902698594c3e73cc3a76fa75f873ff641cbe46_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 13)\n        store_literal_in_memory_935b2e89f8610554b23e74d8a5902698594c3e73cc3a76fa75f873ff641cbe46(pos)\n        end := add(pos, 32)\n    }\n\n    function abi_encode_tuple_t_stringliteral_935b2e89f8610554b23e74d8a5902698594c3e73cc3a76fa75f873ff641cbe46__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_935b2e89f8610554b23e74d8a5902698594c3e73cc3a76fa75f873ff641cbe46_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function store_literal_in_memory_263f68979ab8493dfb876baf1251b5bb5d13d94765abbd21388b0d254d48747c(memPtr) {\n\n        mstore(add(memPtr, 0), \"User not registered\")\n\n    }\n\n    function abi_encode_t_stringliteral_263f68979ab8493dfb876baf1251b5bb5d13d94765abbd21388b0d254d48747c_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 19)\n        store_literal_in_memory_263f68979ab8493dfb876baf1251b5bb5d13d94765abbd21388b0d254d48747c(pos)\n        end := add(pos, 32)\n    }\n\n    function abi_encode_tuple_t_stringliteral_263f68979ab8493dfb876baf1251b5bb5d13d94765abbd21388b0d254d48747c__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_263f68979ab8493dfb876baf1251b5bb5d13d94765abbd21388b0d254d48747c_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n}\n",
           "id": 4,
           "language": "Yul",
           "name": "#utility.yul"
@@ -16849,12 +16849,12 @@
   "storageLayout": {
     "storage": [
       {
-        "astId": 346,
+        "astId": 395,
         "contract": "registry.sol:Registry",
         "label": "users",
         "offset": 0,
         "slot": "0",
-        "type": "t_mapping(t_bytes32,t_struct(User)341_storage)"
+        "type": "t_mapping(t_bytes32,t_struct(User)390_storage)"
       }
     ],
     "types": {
@@ -16868,32 +16868,32 @@
         "label": "bytes32",
         "numberOfBytes": "32"
       },
-      "t_enum(Role)335": {
+      "t_enum(Role)384": {
         "encoding": "inplace",
         "label": "enum Registry.Role",
         "numberOfBytes": "1"
       },
-      "t_mapping(t_bytes32,t_struct(User)341_storage)": {
+      "t_mapping(t_bytes32,t_struct(User)390_storage)": {
         "encoding": "mapping",
         "key": "t_bytes32",
         "label": "mapping(bytes32 => struct Registry.User)",
         "numberOfBytes": "32",
-        "value": "t_struct(User)341_storage"
+        "value": "t_struct(User)390_storage"
       },
-      "t_struct(User)341_storage": {
+      "t_struct(User)390_storage": {
         "encoding": "inplace",
         "label": "struct Registry.User",
         "members": [
           {
-            "astId": 338,
+            "astId": 387,
             "contract": "registry.sol:Registry",
             "label": "role",
             "offset": 0,
             "slot": "0",
-            "type": "t_enum(Role)335"
+            "type": "t_enum(Role)384"
           },
           {
-            "astId": 340,
+            "astId": 389,
             "contract": "registry.sol:Registry",
             "label": "isRegistered",
             "offset": 1,

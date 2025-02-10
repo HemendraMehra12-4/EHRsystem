@@ -53,12 +53,11 @@ async function main() {
 
     try {
         const registryAddress = address.registry; // Insert the deployed Registry contract address
-        const permissionAddress = address.permission;  // Insert the deployed Permission contract address
         const notificationManagerAddress = address.notification;  // Insert the deployed NotificationManager contract address
        
         // Deploy the Permission contract with Registry and NotificationManager addresses
         const { abi: metadataAbi, bytecode: metadatBytecode } = getContractData('Metadata');
-        const metadataContract = await createContract(provider, wallet, metadataAbi, metadatBytecode, [registryAddress,permissionAddress, notificationManagerAddress]);
+        const metadataContract = await createContract(provider, wallet, metadataAbi, metadatBytecode, [registryAddress, notificationManagerAddress]);
         const metadataAddress = await metadataContract.getAddress();
         console.log("Metadata contract deployed at:", metadataAddress);
         updateContractAddresses("metadata",metadataAddress);
