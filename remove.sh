@@ -28,7 +28,6 @@ echo "*************************************${normal}"
 echo "Stop and remove network..."
 
 docker compose down -v
-docker compose rm -sfv
 
 if [ -f "docker-compose-deps.yml" ]; then
     echo "Stopping dependencies..."

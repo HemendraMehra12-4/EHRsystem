@@ -13,7 +13,7 @@ x-besu-def:
     - |
 
       cp "/config/${BESU_CONS_ALGO:-QBFT}genesis.json" /config/genesis.json
-
+      echo "resetting consensus algo................................................"
       /opt/besu/bin/besu \
       --config-file=/config/config.toml \
       --p2p-host=$$(hostname -i) \
