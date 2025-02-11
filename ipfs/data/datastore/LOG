@@ -365,3 +365,15 @@
 15:33:11.446573 db@janitor F·5 G·1
 15:33:11.447089 db@janitor removing table-80
 15:33:11.464641 db@open done T·425.024941ms
+17:41:16.014510 db@close closing
+17:41:16.068959 db@close done T·58.666841ms
+=============== Feb 11, 2025 (UTC) ===============
+04:17:08.146907 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+04:17:08.325500 version@stat F·[1 1] S·53KiB[43KiB 9KiB] Sc·[0.25 0.00]
+04:17:08.342039 db@open opening
+04:17:08.358214 journal@recovery F·1
+04:17:08.447432 journal@recovery recovering @85
+04:17:08.674151 memdb@flush created L0@87 N·8 S·31KiB "/F5..2GQ,v128":"/pr..6RU,v130"
+04:17:08.690962 version@stat F·[2 1] S·84KiB[74KiB 9KiB] Sc·[0.50 0.00]
+04:17:08.979022 db@janitor F·5 G·0
+04:17:08.997521 db@open done T·654.950107ms

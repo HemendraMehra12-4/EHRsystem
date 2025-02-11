@@ -24,18 +24,6 @@ if (!address.notification) {
 const contractAddress = address.notification;
 console.log("Using existing NotificationManager contract at address:", contractAddress);
 
-// Helper to add a notification
-async function addNotification(provider, wallet, deployedContractAbi, deployedContractAddress, userKey, message) {
-    const contract = new ethers.Contract(deployedContractAddress, deployedContractAbi, provider);
-    const contractWithSigner = contract.connect(wallet);
-    
-    const tx = await contractWithSigner.addNotification(userKey, message);
-    await tx.wait();
-    
-    console.log("Notification added successfully!");
-    return tx;
-}
-
 // Helper to get notifications for a user
 async function getNotifications(provider, deployedContractAbi, deployedContractAddress, userKey) {
     const contract = new ethers.Contract(deployedContractAddress, deployedContractAbi, provider);
@@ -53,11 +41,7 @@ async function main() {
     const wallet = new ethers.Wallet(accountPrivateKey, provider);
 
     try {
-        const userKey = ethers.encodeBytes32String("UserKey8");
-
-        console.log("Adding notification...");
-        await addNotification(provider, wallet, contractAbi, contractAddress, userKey, "you have new requests!");
-
+        const userKey = ethers.encodeBytes32String("UserKey7");
         console.log("Fetching notifications...");
         await getNotifications(provider, contractAbi, contractAddress, userKey);
     } catch (error) {

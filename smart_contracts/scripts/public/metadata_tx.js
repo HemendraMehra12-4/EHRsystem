@@ -24,25 +24,28 @@ if (!address.metadata) {
 const contractAddress = address.metadata;
 console.log("Using existing Metadata contract at address:", contractAddress);
 
-// Helper to add EHR data
-async function addEHRdata(provider, wallet, deployedContractAbi, deployedContractAddress, userKey, key, dataType, hashIndex, encKey) {
+// Helper function to add EHR data
+async function addEHRdata(provider, wallet, deployedContractAbi, deployedContractAddress, ownerKey, dataType, HI, encKey) {
     const contract = new ethers.Contract(deployedContractAddress, deployedContractAbi, provider);
     const contractWithSigner = contract.connect(wallet);
     
-    const tx = await contractWithSigner.addEHRdata(userKey, key, dataType, hashIndex, encKey);
+    const tx = await contractWithSigner.addEHRdata(ownerKey, dataType, HI, encKey);
     await tx.wait();
     
-    console.log("EHR data added successfully!");
+    console.log("EHR Data added successfully!");
     return tx;
 }
 
-// Helper to get patient data
-async function getPatientData(provider, deployedContractAbi, deployedContractAddress, userKey) {
+// Helper function to search EHR data for a user
+async function searchData(provider, deployedContractAbi, deployedContractAddress, userKey) {
     const contract = new ethers.Contract(deployedContractAddress, deployedContractAbi, provider);
     
-    const data = await contract.getPatientData(userKey);
-    console.log("Retrieved patient data:", data);
-    return data;
+    const ehrData = await contract.searchData(userKey);
+    console.log(`EHR Data for user ${userKey}:`);
+    ehrData.forEach((data, index) => {
+        console.log(`[${index + 1}] DataType: ${data.dataType}, HI: ${data.HI}, EncKey: ${data.encKey}`);
+    });
+    return ehrData;
 }
 
 async function main() {
@@ -50,19 +53,18 @@ async function main() {
     const wallet = new ethers.Wallet(accountPrivateKey, provider);
 
     try {
-        const userKey = ethers.encodeBytes32String("UserKey8"); // Example user
-        const ehrKey = ethers.encodeBytes32String("EHR123");
-        const dataType = 0; // BloodTest (0), XRay (1), MRI (2), Prescription (3)
-        const hashIndex = ethers.encodeBytes32String("HASH123");
-        const encKey = ethers.encodeBytes32String("ENCKEY123");
+        const userKey = ethers.encodeBytes32String("UserKey8");
+        const dataType = 1;  // Blood Test (Assuming enum mapping: COVID = 0, Blood = 1, etc.)
+        const HI = ethers.encodeBytes32String("HealthInfo124");
+        const encKey = ethers.encodeBytes32String("symmetric124");
 
-        // console.log("Adding EHR data...");
-        // await addEHRdata(provider, wallet, contractAbi, contractAddress, userKey, ehrKey, dataType, hashIndex, encKey);
+        console.log("Adding EHR data...");
+        await addEHRdata(provider, wallet, contractAbi, contractAddress, userKey, dataType, HI, encKey);
 
-        console.log("Fetching patient data...");
-        await getPatientData(provider, contractAbi, contractAddress, userKey);
+        console.log("Fetching EHR data...");
+        await searchData(provider, contractAbi, contractAddress, userKey);
     } catch (error) {
-        console.error("An error occurred!\nCheck if the user has permission or if data exists.", error);
+        console.error("An error occurred! Ensure that the user exists in the registry and try again.", error);
     }
 }
 
