@@ -377,3 +377,36 @@
 04:17:08.690962 version@stat F·[2 1] S·84KiB[74KiB 9KiB] Sc·[0.50 0.00]
 04:17:08.979022 db@janitor F·5 G·0
 04:17:08.997521 db@open done T·654.950107ms
+=============== Feb 24, 2025 (UTC) ===============
+07:45:54.199342 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+07:45:54.201797 version@stat F·[2 1] S·84KiB[74KiB 9KiB] Sc·[0.50 0.00]
+07:45:54.203609 db@open opening
+07:45:54.203835 journal@recovery F·1
+07:45:54.204375 journal@recovery recovering @134
+07:45:54.206711 memdb@flush created L0@135 N·1 S·10KiB "/lo..ers,v187":"/lo..ers,v187"
+07:45:54.206972 version@stat F·[3 1] S·95KiB[85KiB 9KiB] Sc·[0.75 0.00]
+07:45:54.211920 db@janitor F·9 G·3
+07:45:54.211943 db@janitor removing table-136
+07:45:54.211992 db@janitor removing manifest-135
+07:45:54.212033 db@janitor removing table-133
+07:45:54.212101 db@open done T·8.367482ms
+07:46:10.344212 db@close closing
+07:46:10.344429 db@close done T·218.469µs
+=============== Feb 24, 2025 (UTC) ===============
+07:51:20.992804 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+07:51:21.009467 version@stat F·[3 1] S·95KiB[85KiB 9KiB] Sc·[0.75 0.00]
+07:51:21.010426 db@open opening
+07:51:21.010658 journal@recovery F·1
+07:51:21.011979 journal@recovery recovering @136
+07:51:21.024127 memdb@flush created L0@138 N·1 S·10KiB "/lo..ers,v189":"/lo..ers,v189"
+07:51:21.026212 version@stat F·[4 1] S·106KiB[96KiB 9KiB] Sc·[1.00 0.00]
+07:51:21.033138 db@janitor F·7 G·0
+07:51:21.037464 db@open done T·26.916496ms
+07:51:21.038543 table@compaction L0·4 -> L1·1 S·106KiB Q·190
+07:51:21.047413 table@build created L1@141 N·7 S·12KiB "/F5..2GQ,v128":"/pr..ide,v129"
+07:51:21.047734 version@stat F·[0 1] S·12KiB[0B 12KiB] Sc·[0.00 0.00]
+07:51:21.048580 table@compaction committed F-4 S-94KiB Ke·0 D·17 T·9.983599ms
+07:51:21.055500 table@remove removed @135
+07:51:21.055790 table@remove removed @87
+07:51:21.056030 table@remove removed @84
+07:51:21.056096 table@remove removed @83
