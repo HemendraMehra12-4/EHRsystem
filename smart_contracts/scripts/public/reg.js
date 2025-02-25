@@ -50,15 +50,15 @@ async function main() {
 
     try {
         
-        const userKey = ethers.encodeBytes32String("UserKey10");
-        // const role = "CareProvider"; // Change this to test different roles
-        // console.log("Registering a user...");
-        // await registerUser(provider, wallet, contractAbi, contractAddress, userKey, role);
+        const userKey = ethers.encodeBytes32String("UserKeyc1");
+        const role = "CareProvider"; // Change this to test different roles
+        console.log("Registering a user...");
+        await registerUser(provider, wallet, contractAbi, contractAddress, userKey, role);
 
         console.log("Checking the user's role...");
         await getUserRole(provider, contractAbi, contractAddress, userKey);
     } catch (error) {
-        console.error("An error occurred!\ncheck if user is already registered! try a different key.",error);
+        console.error("An error occurred!");
     }
 }
 
