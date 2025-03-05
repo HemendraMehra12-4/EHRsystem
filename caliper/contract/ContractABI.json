@@ -1,0 +1,1127 @@
+{
+    "abi": [
+      {
+        "inputs": [],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "careProvider",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "ipfsCid",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "enum EHRmain.DataType",
+            "name": "dataType",
+            "type": "uint8"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "encryptedSymmetricKey",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "approvedDate",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "expiryDate",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "bool",
+            "name": "status",
+            "type": "bool"
+          }
+        ],
+        "name": "ApprovedRecordAdded",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "string",
+            "name": "ipfsCid",
+            "type": "string"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "enum EHRmain.DataType",
+            "name": "dataType",
+            "type": "uint8"
+          }
+        ],
+        "name": "HealthRecordAdded",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "bytes32",
+            "name": "requestId",
+            "type": "bytes32"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "requester",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          }
+        ],
+        "name": "PermissionGranted",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "bytes32",
+            "name": "requestId",
+            "type": "bytes32"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "requester",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          }
+        ],
+        "name": "PermissionRequested",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "userAddress",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "enum EHRmain.Role",
+            "name": "role",
+            "type": "uint8"
+          }
+        ],
+        "name": "UserRegistered",
+        "type": "event"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "name": "approvedRecords",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "careProvider",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "ipfsCid",
+            "type": "string"
+          },
+          {
+            "internalType": "enum EHRmain.DataType",
+            "name": "dataType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "string",
+            "name": "encryptedSymmetricKey",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "approvedDate",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "expiryDate",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "status",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function",
+        "constant": true
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "string",
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "name": "approvedRecordsByID",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "careProvider",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "ipfsCid",
+            "type": "string"
+          },
+          {
+            "internalType": "enum EHRmain.DataType",
+            "name": "dataType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "string",
+            "name": "encryptedSymmetricKey",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "approvedDate",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "expiryDate",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "status",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function",
+        "constant": true
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "string",
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "name": "healthRecords",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "ipfsCid",
+            "type": "string"
+          },
+          {
+            "internalType": "enum EHRmain.DataType",
+            "name": "dataType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "string",
+            "name": "encryptedSymmetricKey",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "timestamp",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "isValid",
+            "type": "bool"
+          },
+          {
+            "internalType": "address",
+            "name": "provider",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function",
+        "constant": true
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "name": "ownerToHealthRecords",
+        "outputs": [
+          {
+            "internalType": "string",
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function",
+        "constant": true
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "name": "permissionRequestIds",
+        "outputs": [
+          {
+            "internalType": "bytes32",
+            "name": "",
+            "type": "bytes32"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function",
+        "constant": true
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "",
+            "type": "bytes32"
+          }
+        ],
+        "name": "permissionRequests",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "requester",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "requestId",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "string",
+            "name": "ipfsCid",
+            "type": "string"
+          },
+          {
+            "internalType": "enum EHRmain.PermissionType",
+            "name": "permissionType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "enum EHRmain.RequestStatus",
+            "name": "status",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "requestDate",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "expiryDate",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "incentiveAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "isIncentiveBased",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function",
+        "constant": true
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "",
+            "type": "string"
+          },
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "name": "permissions",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function",
+        "constant": true
+      },
+      {
+        "inputs": [],
+        "name": "systemOwner",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function",
+        "constant": true
+      },
+      {
+        "inputs": [],
+        "name": "totalRecords",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function",
+        "constant": true
+      },
+      {
+        "inputs": [],
+        "name": "totalRequests",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function",
+        "constant": true
+      },
+      {
+        "inputs": [],
+        "name": "totalUsers",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function",
+        "constant": true
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "name": "userKeys",
+        "outputs": [
+          {
+            "internalType": "string",
+            "name": "publicKeyForEncryption",
+            "type": "string"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function",
+        "constant": true
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "name": "users",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "userAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "enum EHRmain.Role",
+            "name": "role",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "registrationDate",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "publicKeyHash",
+            "type": "bytes32"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function",
+        "constant": true
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "enum EHRmain.Role",
+            "name": "_role",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "_publicKeyHash",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "string",
+            "name": "_publicKeyForEncryption",
+            "type": "string"
+          }
+        ],
+        "name": "registerUser",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "userAddress",
+            "type": "address"
+          }
+        ],
+        "name": "getKeyPair",
+        "outputs": [
+          {
+            "internalType": "string",
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function",
+        "constant": true
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_userAddress",
+            "type": "address"
+          }
+        ],
+        "name": "checkUser",
+        "outputs": [
+          {
+            "internalType": "enum EHRmain.Role",
+            "name": "",
+            "type": "uint8"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function",
+        "constant": true
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "string",
+            "name": "_ipfsCid",
+            "type": "string"
+          },
+          {
+            "internalType": "enum EHRmain.DataType",
+            "name": "_dataType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "string",
+            "name": "_encryptedSymmetricKey",
+            "type": "string"
+          }
+        ],
+        "name": "addPHRData",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_owner",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "_careProvider",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "_ipfsCid",
+            "type": "string"
+          },
+          {
+            "internalType": "enum EHRmain.DataType",
+            "name": "_dataType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "string",
+            "name": "_encryptedSymmetricKey",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_approvedDate",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_expiryDate",
+            "type": "uint256"
+          }
+        ],
+        "name": "addApprovedRecord",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_owner",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "_ipfsCid",
+            "type": "string"
+          },
+          {
+            "internalType": "enum EHRmain.PermissionType",
+            "name": "_permissionType",
+            "type": "uint8"
+          }
+        ],
+        "name": "requestNonIncentiveBasedPermission",
+        "outputs": [
+          {
+            "internalType": "bytes32",
+            "name": "",
+            "type": "bytes32"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "patient",
+            "type": "address"
+          }
+        ],
+        "name": "getPendingRequestsForPatient",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "requester",
+                "type": "address"
+              },
+              {
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "requestId",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "string",
+                "name": "ipfsCid",
+                "type": "string"
+              },
+              {
+                "internalType": "enum EHRmain.PermissionType",
+                "name": "permissionType",
+                "type": "uint8"
+              },
+              {
+                "internalType": "enum EHRmain.RequestStatus",
+                "name": "status",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint256",
+                "name": "requestDate",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "expiryDate",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "incentiveAmount",
+                "type": "uint256"
+              },
+              {
+                "internalType": "bool",
+                "name": "isIncentiveBased",
+                "type": "bool"
+              }
+            ],
+            "internalType": "struct EHRmain.PermissionRequest[]",
+            "name": "",
+            "type": "tuple[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function",
+        "constant": true
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "_requestId",
+            "type": "bytes32"
+          }
+        ],
+        "name": "approvePermission",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "userAddress",
+            "type": "address"
+          }
+        ],
+        "name": "getHealthRecordsByOwner",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+              },
+              {
+                "internalType": "string",
+                "name": "ipfsCid",
+                "type": "string"
+              },
+              {
+                "internalType": "enum EHRmain.DataType",
+                "name": "dataType",
+                "type": "uint8"
+              },
+              {
+                "internalType": "string",
+                "name": "encryptedSymmetricKey",
+                "type": "string"
+              },
+              {
+                "internalType": "uint256",
+                "name": "timestamp",
+                "type": "uint256"
+              },
+              {
+                "internalType": "bool",
+                "name": "isValid",
+                "type": "bool"
+              },
+              {
+                "internalType": "address",
+                "name": "provider",
+                "type": "address"
+              }
+            ],
+            "internalType": "struct EHRmain.HealthRecord[]",
+            "name": "",
+            "type": "tuple[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function",
+        "constant": true
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "string",
+            "name": "recordId",
+            "type": "string"
+          }
+        ],
+        "name": "getHealthRecordByIpfs",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "ipfsCid",
+            "type": "string"
+          },
+          {
+            "internalType": "enum EHRmain.DataType",
+            "name": "dataType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "string",
+            "name": "encryptedSymmetricKey",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "timestamp",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "isValid",
+            "type": "bool"
+          },
+          {
+            "internalType": "address",
+            "name": "provider",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function",
+        "constant": true
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_careProvider",
+            "type": "address"
+          }
+        ],
+        "name": "getRecordsByCareProvider",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+              },
+              {
+                "internalType": "address",
+                "name": "careProvider",
+                "type": "address"
+              },
+              {
+                "internalType": "string",
+                "name": "ipfsCid",
+                "type": "string"
+              },
+              {
+                "internalType": "enum EHRmain.DataType",
+                "name": "dataType",
+                "type": "uint8"
+              },
+              {
+                "internalType": "string",
+                "name": "encryptedSymmetricKey",
+                "type": "string"
+              },
+              {
+                "internalType": "uint256",
+                "name": "approvedDate",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "expiryDate",
+                "type": "uint256"
+              },
+              {
+                "internalType": "bool",
+                "name": "status",
+                "type": "bool"
+              }
+            ],
+            "internalType": "struct EHRmain.approvedRecord[]",
+            "name": "",
+            "type": "tuple[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function",
+        "constant": true
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "requester",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "recordId",
+            "type": "string"
+          }
+        ],
+        "name": "getRecordsForResearcher",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+              },
+              {
+                "internalType": "address",
+                "name": "careProvider",
+                "type": "address"
+              },
+              {
+                "internalType": "string",
+                "name": "ipfsCid",
+                "type": "string"
+              },
+              {
+                "internalType": "enum EHRmain.DataType",
+                "name": "dataType",
+                "type": "uint8"
+              },
+              {
+                "internalType": "string",
+                "name": "encryptedSymmetricKey",
+                "type": "string"
+              },
+              {
+                "internalType": "uint256",
+                "name": "approvedDate",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "expiryDate",
+                "type": "uint256"
+              },
+              {
+                "internalType": "bool",
+                "name": "status",
+                "type": "bool"
+              }
+            ],
+            "internalType": "struct EHRmain.approvedRecord",
+            "name": "",
+            "type": "tuple"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function",
+        "constant": true
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "requestId",
+            "type": "bytes32"
+          }
+        ],
+        "name": "getPermissionRequest",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "requester",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "ipfsCid",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "requestDate",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "expiryDate",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "incentiveAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "isIncentiveBased",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint8",
+            "name": "status",
+            "type": "uint8"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function",
+        "constant": true
+      }
+    ]
+  }
+  
