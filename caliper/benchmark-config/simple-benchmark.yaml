@@ -1,0 +1,13 @@
+test:
+  workers:
+    number: 5
+  rounds:
+    - label: getHealthRecordByIpfs
+      description: Testing health record retrieval
+      txNumber: 100
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 5
+      workload:
+        module: workloads/getRecordByIPFS.js
