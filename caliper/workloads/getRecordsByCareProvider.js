@@ -2,32 +2,33 @@
  * Workload module for Caliper to fetch records approved by a care provider.
  */
 
-'use strict';
+"use strict";
 
-const { WorkloadModuleBase } = require('@hyperledger/caliper-core');
+const { WorkloadModuleBase } = require("@hyperledger/caliper-core");
 
 class GetRecordsByCareProviderWorkload extends WorkloadModuleBase {
+  constructor() {
+    super();
+  }
 
-    async initializeWorkloadModule(workerIndex, totalWorkers, roundIndex, roundArguments, sutAdapter, sutContext) {
-        await super.initializeWorkloadModule(workerIndex, totalWorkers, roundIndex, roundArguments, sutAdapter, sutContext);
-    }
+  async submitTransaction() {
+    const careProvider = `0x${Math.floor(Math.random() * 1e16)
+      .toString(16)
+      .padEnd(40, "0")}`;
 
-    async submitTransaction() {
-        const careProvider = `0x${Math.floor(Math.random() * 1e16).toString(16).padEnd(40, '0')}`;
+    const request = {
+      contract: "EHRmain",
+      verb: "getRecordsByCareProvider",
+      args: [careProvider],
+      readOnly: true,
+    };
 
-        const request = {
-            contract: this.roundArguments.contract,
-            verb: 'getRecordsByCareProvider',
-            args: [careProvider],
-            readOnly: true
-        };
-
-        await this.sutAdapter.sendRequests(request);
-    }
+    await this.sutAdapter.sendRequests(request);
+  }
 }
 
 function createWorkloadModule() {
-    return new GetRecordsByCareProviderWorkload();
+  return new GetRecordsByCareProviderWorkload();
 }
 
 module.exports.createWorkloadModule = createWorkloadModule;

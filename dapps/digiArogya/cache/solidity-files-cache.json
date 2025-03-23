@@ -37,8 +37,8 @@
       ]
     },
     "/home/subrajeet/Projects/EHRsystem/dapps/digiArogya/contracts/EHRmain.sol": {
-      "lastModificationDate": 1740383224282,
-      "contentHash": "b49bdeef9441f284d419fdea48f7fdbd",
+      "lastModificationDate": 1741595495098,
+      "contentHash": "d74731cabcd7f14964b0b49364554026",
       "sourceName": "contracts/EHRmain.sol",
       "solcConfig": {
         "version": "0.8.19",

@@ -410,22 +410,22 @@ contract EHRmain {
             "Invalid record owner"
         );
 
-       bytes32 requestId = keccak256(
+        bytes32 requestId = keccak256(
             abi.encodePacked(msg.sender, _owner, _ipfsCid, block.timestamp)
         );
 
         permissionRequests[requestId] = PermissionRequest({
-    requester: msg.sender,
-    owner: _owner,
-    requestId: requestId,  // Store as bytes32
-    ipfsCid: _ipfsCid,
-    permissionType: _permissionType,
-    status: RequestStatus.PENDING,
-    requestDate: block.timestamp,
-    expiryDate: block.timestamp + 30 days,
-    incentiveAmount: 0,
-    isIncentiveBased: true
-         });
+            requester: msg.sender,
+            owner: _owner,
+            requestId: requestId, // Store as bytes32
+            ipfsCid: _ipfsCid,
+            permissionType: _permissionType,
+            status: RequestStatus.PENDING,
+            requestDate: block.timestamp,
+            expiryDate: block.timestamp + 30 days,
+            incentiveAmount: 0,
+            isIncentiveBased: true
+        });
 
         totalRequests++;
         emit PermissionRequested(requestId, msg.sender, _owner);
@@ -501,6 +501,7 @@ contract EHRmain {
         emit PermissionRevoked(_ipfsCid, _user);
         return true;
     }
+
     // Access control
     function getHealthRecordsByOwner(
         address userAddress

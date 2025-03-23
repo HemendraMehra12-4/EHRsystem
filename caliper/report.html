@@ -134,7 +134,7 @@
             <ul>
                 <h3>&nbspBenchmark results</h3>
                 <li><a href="#benchmarksummary">Summary</a></li>
-                    <li><a href="#getHealthRecordByIpfs">getHealthRecordByIpfs</a></li>
+                    <li><a href="#getRecordByIpfs">getRecordByIpfs</a></li>
             </ul>
             <ul>
                 <h3>&nbspSystem under test</h3>
@@ -152,28 +152,28 @@
                     </tr>
 
                     <tr>
-                         <td>getHealthRecordByIpfs</td> <td>100</td> <td>0</td> <td>5.3</td> <td>0.08</td> <td>0.00</td> <td>0.01</td> <td>5.3</td>
+                         <td>getRecordByIpfs</td> <td>10</td> <td>0</td> <td>9.8</td> <td>0.08</td> <td>0.02</td> <td>0.05</td> <td>9.6</td>
                     </tr>
                 </table>
             </div>
-            <div style="border-bottom: 1px solid #d9d9d9; padding-bottom: 10px;" id="getHealthRecordByIpfs">
-                <h2>Benchmark round: getHealthRecordByIpfs</h2>
-                <p>Testing health record retrieval</p>
+            <div style="border-bottom: 1px solid #d9d9d9; padding-bottom: 10px;" id="getRecordByIpfs">
+                <h2>Benchmark round: getRecordByIpfs</h2>
+                <p>Testing health record retrieval from IPFS</p>
                 <pre style="overflow: visible;white-space: pre-wrap;max-height:100%;">rateControl:
   type: fixed-rate
   opts:
     tps: 5
 </pre>
-                        <h3>Performance metrics for getHealthRecordByIpfs</h3>
+                        <h3>Performance metrics for getRecordByIpfs</h3>
                             <table style="min-width: 100%;">
                                 <tr>
                                      <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
                                 </tr>
                                 <tr>
-                                     <td>getHealthRecordByIpfs</td> <td>100</td> <td>0</td> <td>5.3</td> <td>0.08</td> <td>0.00</td> <td>0.01</td> <td>5.3</td>
+                                     <td>getRecordByIpfs</td> <td>10</td> <td>0</td> <td>9.8</td> <td>0.08</td> <td>0.02</td> <td>0.05</td> <td>9.6</td>
                                 </tr>
                             </table>
-                        <h3>Resource utilization for getHealthRecordByIpfs</h3>
+                        <h3>Resource utilization for getRecordByIpfs</h3>
             </div>
 
             <div style="border-bottom: 1px solid #d9d9d9; padding-bottom: 10px;">
@@ -182,15 +182,20 @@
                 <pre id="benchmarkInfo" style="overflow: visible;white-space: pre-wrap;max-height:100%;">workers:
   number: 5
 rounds:
-  - label: getHealthRecordByIpfs
-    description: Testing health record retrieval
-    txNumber: 100
+  - label: getRecordByIpfs
+    description: Testing health record retrieval from IPFS
+    txNumber: 10
     rateControl:
       type: fixed-rate
       opts:
         tps: 5
     workload:
       module: workloads&#x2F;getRecordByIPFS.js
+monitor:
+  type: prometheus
+  prometheus:
+    pushGatewayUrl: &#39;http:&#x2F;&#x2F;172.16.239.36:9091&#39;
+    pushInterval: 1
 </pre>
                 <h3>SUT</h3>
                 <pre id="sutdetails">not provided</pre>

@@ -11,7 +11,6 @@ x-besu-def:
     - /bin/bash
     - -c
     - |
-
       cp "/config/${BESU_CONS_ALGO:-QBFT}genesis.json" /config/genesis.json
       echo "resetting consensus algo................................................"
       /opt/besu/bin/besu \
@@ -19,7 +18,6 @@ x-besu-def:
       --p2p-host=$$(hostname -i) \
       --rpc-http-api=EEA,WEB3,ETH,NET,TRACE,DEBUG,ADMIN,TXPOOL,PRIV,PERM,${BESU_CONS_ALGO:-QBFT} \
       --rpc-ws-api=EEA,WEB3,ETH,NET,TRACE,DEBUG,ADMIN,TXPOOL,PRIV,PERM,${BESU_CONS_ALGO:-QBFT} ;
-
 
 x-tessera-def:
   &tessera-def
@@ -40,12 +38,6 @@ x-tessera-def:
     timeout: 3s
     retries: 20
     start_period: 5s
-
-
-
-
-
-
 
 x-blockscout-ref:
   &blockscout-def
@@ -99,10 +91,6 @@ x-blockscoutpostgres-ref:
     interval: 5s
     timeout: 10s
     retries: 5
-
-
-
-
 
 x-chainlensapi-ref:
   &chainlensapi-def
@@ -161,8 +149,6 @@ x-chainlensnginx-ref:
     - chainlensapi
     - chainlensweb
 
-
-
 x-ethsignerProxy-def:
   &ethsignerProxy-def
   image: consensys/ethsigner:${ETHSIGNER_VERSION:-latest}
@@ -181,8 +167,6 @@ x-ethsignerProxy-def:
     - 8545
 
 services:
-  
-
   validator1:
     << : *besu-def
     ports:
@@ -292,7 +276,6 @@ services:
     networks:
       quorum-dev-quickstart:
         ipv4_address: 172.16.239.40
-
 
   member1tessera:
     << : *tessera-def
@@ -423,8 +406,6 @@ services:
       quorum-dev-quickstart:
         ipv4_address: 172.16.239.18
 
-
-
   explorer:
     image: consensys/quorum-explorer:${QUORUM_EXPLORER_VERSION:-latest}
     volumes:
@@ -438,8 +419,6 @@ services:
       quorum-dev-quickstart:
         ipv4_address: 172.16.239.31
 
-
-
   blockscout:
     << : *blockscout-def
     networks:
@@ -451,9 +430,6 @@ services:
     networks:
       quorum-dev-quickstart:
         ipv4_address: 172.16.239.52
-
-
-
 
   chainlensapi:
     <<: *chainlensapi-def
@@ -486,10 +462,7 @@ services:
     networks:
       quorum-dev-quickstart:
         ipv4_address: 172.16.239.57
-
-
-
-
+        
   prometheus:
     image: "prom/prometheus:v2.46.0"
     volumes:
@@ -562,15 +535,7 @@ services:
         limits:
           cpus: "4.0"
           memory: "8000m"
-    
-      
-           
-
-
-
-
-
-
+          
 volumes:
   public-keys:
   prometheus:
