@@ -114,6 +114,27 @@ scrape_configs:
     scheme: http
     static_configs:
       - targets: [member3tessera:9545]
+  - job_name: newnode1
+    crape_interval: 15s
+    scrape_timeout: 10s
+    metrics_path: /metrics
+    scheme: http
+    static_configs:
+      - targets: [newnode1:9545]    
+  - job_name: newnode2
+    crape_interval: 15s
+    scrape_timeout: 10s
+    metrics_path: /metrics
+    scheme: http
+    static_configs:
+      - targets: [newnode2:9545]
+  - job_name: newnode3
+    crape_interval: 15s
+    scrape_timeout: 10s
+    metrics_path: /metrics
+    scheme: http
+    static_configs:
+      - targets: [newnode3:9545]         
 
   # all the nodes override themselves if given the same name
   # so we use dns based lookup and, replace labels to

@@ -405,6 +405,47 @@ services:
     networks:
       quorum-dev-quickstart:
         ipv4_address: 172.16.239.18
+  newnode1:
+   <<: *besu-def
+   container_name: newnode1
+   volumes:
+    - public-keys:/opt/besu/public-keys/
+    - ./config/besu/:/config
+    - ./config/nodes/newnode1:/opt/besu/keys
+    - ./logs/besu:/tmp/besu
+   depends_on:
+    - validator1
+   networks:
+    quorum-dev-quickstart:
+      ipv4_address: 172.16.239.41   
+
+  newnode2:
+   <<: *besu-def
+   container_name: newnode2
+   volumes:
+    - public-keys:/opt/besu/public-keys/
+    - ./config/besu/:/config
+    - ./config/nodes/newnode2:/opt/besu/keys
+    - ./logs/besu:/tmp/besu
+   depends_on:
+    - validator1
+   networks:
+    quorum-dev-quickstart:
+      ipv4_address: 172.16.239.42
+
+  newnode3:
+   <<: *besu-def
+   container_name: newnode3
+   volumes:
+    - public-keys:/opt/besu/public-keys/
+    - ./config/besu/:/config
+    - ./config/nodes/newnode3:/opt/besu/keys
+    - ./logs/besu:/tmp/besu
+   depends_on:
+    - validator1
+   networks:
+    quorum-dev-quickstart:
+      ipv4_address: 172.16.239.43
 
   explorer:
     image: consensys/quorum-explorer:${QUORUM_EXPLORER_VERSION:-latest}
