@@ -3,4 +3,5 @@ node_modules/
 *.log
 *.tmp
 *.txt
+*.csv
 next_up

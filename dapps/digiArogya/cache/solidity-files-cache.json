@@ -1,43 +1,8 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/home/subrajeet/Projects/quorum-test-network/dapps/DigiArogya/contracts/EHRmain.sol": {
-      "lastModificationDate": 1740298894341,
-      "contentHash": "b49bdeef9441f284d419fdea48f7fdbd",
-      "sourceName": "contracts/EHRmain.sol",
-      "solcConfig": {
-        "version": "0.8.19",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "EHRmain"
-      ]
-    },
-    "/home/subrajeet/Projects/EHRsystem/dapps/digiArogya/contracts/EHRmain.sol": {
-      "lastModificationDate": 1741595495098,
+    "/home/tg1/codes/DApp/BadalProject/EHRsystem/dapps/digiArogya/contracts/EHRmain.sol": {
+      "lastModificationDate": 1743261736267,
       "contentHash": "d74731cabcd7f14964b0b49364554026",
       "sourceName": "contracts/EHRmain.sol",
       "solcConfig": {
