@@ -95,6 +95,9 @@ contract EHRmain {
     // Mapping to store health record IPFS CIDs by owner address
     mapping(address => string[]) public ownerToHealthRecords;
 
+    // Mapping to track access counts for health records
+    mapping(string => uint256) public accessCounts;
+
     // Mapping to store the keyPair (PU,PK) of a user ( here one of the key is encrypted so it is secure)
     mapping(address => KeyPair) public userKeys;
 
@@ -107,6 +110,7 @@ contract EHRmain {
 
     // Events
     event UserRegistered(address indexed userAddress, Role role);
+    event DebugEvent(string ipfsCid, uint256 length); // Declare DebugEvent
     event HealthRecordAdded(
         string indexed ipfsCid,
         address indexed owner,
@@ -129,6 +133,12 @@ contract EHRmain {
     event EmergencyAccess(
         address indexed provider,
         address indexed patient,
+        uint256 timestamp
+    );
+
+    event RecordAccessed(
+        string indexed recordId,
+        address indexed accessor,
         uint256 timestamp
     );
 
@@ -269,7 +279,11 @@ contract EHRmain {
         string memory _ipfsCid,
         DataType _dataType,
         string calldata _encryptedSymmetricKey
-    ) external onlyPatient returns (bool) {
+    ) public returns (bool) {
+        emit DebugEvent(
+            _ipfsCid,
+            bytes(healthRecords[_ipfsCid].ipfsCid).length
+        );
         require(
             bytes(healthRecords[_ipfsCid].ipfsCid).length == 0,
             "Record already exists"
@@ -524,7 +538,6 @@ contract EHRmain {
         string memory recordId
     )
         public
-        view
         returns (
             address owner,
             string memory ipfsCid,
@@ -536,7 +549,8 @@ contract EHRmain {
         )
     {
         HealthRecord memory record = healthRecords[recordId];
-
+        accessCounts[recordId] = accessCounts[recordId] + 1;
+        emit RecordAccessed(recordId, msg.sender, block.timestamp);
         return (
             record.owner,
             record.ipfsCid,

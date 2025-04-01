@@ -124,6 +124,7 @@ export declare namespace EHRmain {
 export interface EHRmainInterface extends Interface {
   getFunction(
     nameOrSignature:
+      | "accessCounts"
       | "addApprovedRecord"
       | "addEHRData"
       | "addPHRData"
@@ -160,14 +161,20 @@ export interface EHRmainInterface extends Interface {
   getEvent(
     nameOrSignatureOrTopic:
       | "ApprovedRecordAdded"
+      | "DebugEvent"
       | "EmergencyAccess"
       | "HealthRecordAdded"
       | "PermissionGranted"
       | "PermissionRequested"
       | "PermissionRevoked"
+      | "RecordAccessed"
       | "UserRegistered"
   ): EventFragment;
 
+  encodeFunctionData(
+    functionFragment: "accessCounts",
+    values: [string]
+  ): string;
   encodeFunctionData(
     functionFragment: "addApprovedRecord",
     values: [
@@ -298,6 +305,10 @@ export interface EHRmainInterface extends Interface {
   ): string;
   encodeFunctionData(functionFragment: "users", values: [AddressLike]): string;
 
+  decodeFunctionResult(
+    functionFragment: "accessCounts",
+    data: BytesLike
+  ): Result;
   decodeFunctionResult(
     functionFragment: "addApprovedRecord",
     data: BytesLike
@@ -440,6 +451,19 @@ export namespace ApprovedRecordAddedEvent {
   export type LogDescription = TypedLogDescription<Event>;
 }
 
+export namespace DebugEventEvent {
+  export type InputTuple = [ipfsCid: string, length: BigNumberish];
+  export type OutputTuple = [ipfsCid: string, length: bigint];
+  export interface OutputObject {
+    ipfsCid: string;
+    length: bigint;
+  }
+  export type Event = TypedContractEvent<InputTuple, OutputTuple, OutputObject>;
+  export type Filter = TypedDeferredTopicFilter<Event>;
+  export type Log = TypedEventLog<Event>;
+  export type LogDescription = TypedLogDescription<Event>;
+}
+
 export namespace EmergencyAccessEvent {
   export type InputTuple = [
     provider: AddressLike,
@@ -537,6 +561,28 @@ export namespace PermissionRevokedEvent {
   export type LogDescription = TypedLogDescription<Event>;
 }
 
+export namespace RecordAccessedEvent {
+  export type InputTuple = [
+    recordId: string,
+    accessor: AddressLike,
+    timestamp: BigNumberish
+  ];
+  export type OutputTuple = [
+    recordId: string,
+    accessor: string,
+    timestamp: bigint
+  ];
+  export interface OutputObject {
+    recordId: string;
+    accessor: string;
+    timestamp: bigint;
+  }
+  export type Event = TypedContractEvent<InputTuple, OutputTuple, OutputObject>;
+  export type Filter = TypedDeferredTopicFilter<Event>;
+  export type Log = TypedEventLog<Event>;
+  export type LogDescription = TypedLogDescription<Event>;
+}
+
 export namespace UserRegisteredEvent {
   export type InputTuple = [userAddress: AddressLike, role: BigNumberish];
   export type OutputTuple = [userAddress: string, role: bigint];
@@ -592,6 +638,8 @@ export interface EHRmain extends BaseContract {
   removeAllListeners<TCEvent extends TypedContractEvent>(
     event?: TCEvent
   ): Promise<this>;
+
+  accessCounts: TypedContractMethod<[arg0: string], [bigint], "view">;
 
   addApprovedRecord: TypedContractMethod<
     [
@@ -685,7 +733,7 @@ export interface EHRmain extends BaseContract {
         provider: string;
       }
     ],
-    "view"
+    "nonpayable"
   >;
 
   getHealthRecordsByOwner: TypedContractMethod<
@@ -857,6 +905,9 @@ export interface EHRmain extends BaseContract {
   ): T;
 
   getFunction(
+    nameOrSignature: "accessCounts"
+  ): TypedContractMethod<[arg0: string], [bigint], "view">;
+  getFunction(
     nameOrSignature: "addApprovedRecord"
   ): TypedContractMethod<
     [
@@ -954,7 +1005,7 @@ export interface EHRmain extends BaseContract {
         provider: string;
       }
     ],
-    "view"
+    "nonpayable"
   >;
   getFunction(
     nameOrSignature: "getHealthRecordsByOwner"
@@ -1143,6 +1194,13 @@ export interface EHRmain extends BaseContract {
     ApprovedRecordAddedEvent.OutputObject
   >;
   getEvent(
+    key: "DebugEvent"
+  ): TypedContractEvent<
+    DebugEventEvent.InputTuple,
+    DebugEventEvent.OutputTuple,
+    DebugEventEvent.OutputObject
+  >;
+  getEvent(
     key: "EmergencyAccess"
   ): TypedContractEvent<
     EmergencyAccessEvent.InputTuple,
@@ -1178,6 +1236,13 @@ export interface EHRmain extends BaseContract {
     PermissionRevokedEvent.OutputObject
   >;
   getEvent(
+    key: "RecordAccessed"
+  ): TypedContractEvent<
+    RecordAccessedEvent.InputTuple,
+    RecordAccessedEvent.OutputTuple,
+    RecordAccessedEvent.OutputObject
+  >;
+  getEvent(
     key: "UserRegistered"
   ): TypedContractEvent<
     UserRegisteredEvent.InputTuple,
@@ -1195,6 +1260,17 @@ export interface EHRmain extends BaseContract {
       ApprovedRecordAddedEvent.InputTuple,
       ApprovedRecordAddedEvent.OutputTuple,
       ApprovedRecordAddedEvent.OutputObject
+    >;
+
+    "DebugEvent(string,uint256)": TypedContractEvent<
+      DebugEventEvent.InputTuple,
+      DebugEventEvent.OutputTuple,
+      DebugEventEvent.OutputObject
+    >;
+    DebugEvent: TypedContractEvent<
+      DebugEventEvent.InputTuple,
+      DebugEventEvent.OutputTuple,
+      DebugEventEvent.OutputObject
     >;
 
     "EmergencyAccess(address,address,uint256)": TypedContractEvent<
@@ -1250,6 +1326,17 @@ export interface EHRmain extends BaseContract {
       PermissionRevokedEvent.InputTuple,
       PermissionRevokedEvent.OutputTuple,
       PermissionRevokedEvent.OutputObject
+    >;
+
+    "RecordAccessed(string,address,uint256)": TypedContractEvent<
+      RecordAccessedEvent.InputTuple,
+      RecordAccessedEvent.OutputTuple,
+      RecordAccessedEvent.OutputObject
+    >;
+    RecordAccessed: TypedContractEvent<
+      RecordAccessedEvent.InputTuple,
+      RecordAccessedEvent.OutputTuple,
+      RecordAccessedEvent.OutputObject
     >;
 
     "UserRegistered(address,uint8)": TypedContractEvent<

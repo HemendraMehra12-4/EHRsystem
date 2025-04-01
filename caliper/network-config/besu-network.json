@@ -7,13 +7,48 @@
     "contractDeployerAddress": "0xfe3b557e8fb62b89f4916b721be55ceb828dbd73",
     "contractDeployerAddressPrivateKey": "0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63",
     "fromAddressSeed": "0x3f841bf589fdf83a521e55d51afddc34fa65351161eead24f064855fc29c9580",
+    "accounts": [
+      {
+        "address": "0x1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t",
+        "privateKey": "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef"
+      },
+      {
+        "address": "0x2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1a",
+        "privateKey": "0xabcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890"
+      },
+      {
+        "address": "0x3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1a2b",
+        "privateKey": "0x7890abcdef1234567890abcdef1234567890abcdef1234567890abcdef123456"
+      },
+      {
+        "address": "0x4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1a2b3c",
+        "privateKey": "0x4567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef123"
+      },
+      {
+        "address": "0x5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1a2b3c4d",
+        "privateKey": "0xabcdef7890abcdef1234567890abcdef1234567890abcdef1234567890abcdef"
+      },
+      {
+        "address": "0x6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1a2b3c4d5e",
+        "privateKey": "0x7890abcdef4567890abcdef1234567890abcdef1234567890abcdef123456789"
+      },
+      {
+        "address": "0x7g8h9i0j1k2l3m4n5o6p7q8r9s0t1a2b3c4d5e6f",
+        "privateKey": "0x1234567890abcdef7890abcdef1234567890abcdef1234567890abcdef123456"
+      },
+      {
+        "address": "0x8h9i0j1k2l3m4n5o6p7q8r9s0t1a2b3c4d5e6f7g",
+        "privateKey": "0xabcdef1234567890abcdef7890abcdef1234567890abcdef1234567890abcdef"
+      }
+    ],
     "transactionConfirmationBlocks": 2,
+    "nonces": true,
     "contracts": {
       "EHRmain": {
-        "address": "0x42699A7612A82f1d9C36148af9C77354759b210b",
-        "estimateGas": true,
+        "address": "0xa50a51c09a5c451C52BB714527E1974b686D8e77",
+        "estimateGas": false,
         "gas": {
-          "addPHR": 100000,
+          "addPHRData": 1000000,
           "approvePermission": 100000,
           "getRecordByIPFS": 100000,
           "getRecordsByCareProvider": 100000,
@@ -81,6 +116,25 @@
               }
             ],
             "name": "ApprovedRecordAdded",
+            "type": "event"
+          },
+          {
+            "anonymous": false,
+            "inputs": [
+              {
+                "indexed": false,
+                "internalType": "string",
+                "name": "ipfsCid",
+                "type": "string"
+              },
+              {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "length",
+                "type": "uint256"
+              }
+            ],
+            "name": "DebugEvent",
             "type": "event"
           },
           {
@@ -207,6 +261,31 @@
             "inputs": [
               {
                 "indexed": true,
+                "internalType": "string",
+                "name": "recordId",
+                "type": "string"
+              },
+              {
+                "indexed": true,
+                "internalType": "address",
+                "name": "accessor",
+                "type": "address"
+              },
+              {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "timestamp",
+                "type": "uint256"
+              }
+            ],
+            "name": "RecordAccessed",
+            "type": "event"
+          },
+          {
+            "anonymous": false,
+            "inputs": [
+              {
+                "indexed": true,
                 "internalType": "address",
                 "name": "userAddress",
                 "type": "address"
@@ -220,6 +299,25 @@
             ],
             "name": "UserRegistered",
             "type": "event"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+              }
+            ],
+            "name": "accessCounts",
+            "outputs": [
+              {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+              }
+            ],
+            "stateMutability": "view",
+            "type": "function"
           },
           {
             "inputs": [
@@ -543,7 +641,7 @@
                 "type": "address"
               }
             ],
-            "stateMutability": "view",
+            "stateMutability": "nonpayable",
             "type": "function"
           },
           {

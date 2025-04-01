@@ -105,16 +105,19 @@ If everything is set up correctly, you should see the Besu network containers ru
 ### 🔹 **3.1 Bind and Install Required Dependencies**
 
 1. Navigate to the caliper directory:
+
    ```sh
    cd caliper
    ```
-2. Bind Caliper with Besu:
+
+2. Install Caliper Core and Dotenv:
+   ```sh
+   npm install --only=prod @hyperledger/caliper-core
+   npm install dotenv
+   ```
+3. Bind Caliper with Besu:
    ```sh
    npx caliper bind --caliper-bind-sut besu:latest
-   ```
-3. Install Caliper core:
-   ```sh
-   npm install @hyperledger/caliper-core
    ```
 
 ---

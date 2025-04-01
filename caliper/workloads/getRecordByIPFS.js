@@ -42,7 +42,7 @@ class GetRecordByIPFSWorkload extends WorkloadModuleBase {
       contract: "EHRmain",
       verb: "getHealthRecordByIpfs",
       args: [recordId],
-      readOnly: true,
+      readOnly: false,
     };
 
     await this.sutAdapter.sendRequests(request);

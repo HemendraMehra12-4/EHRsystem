@@ -1,16 +1,16 @@
 test:
   workers:
-    number: 5
+    number: 8
   rounds:
-    # - label: addPHR
-    #   description: Testing adding Personal Health Records
-    #   txNumber: 50
-    #   rateControl:
-    #     type: fixed-rate
-    #     opts:
-    #       tps: 2
-    #   workload:
-    #     module: workloads/addPHR.js
+    - label: addPHRData
+      description: Testing adding Personal Health Records
+      txNumber: 200
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 5
+      workload:
+        module: workloads/addPHRData.js
 
     # - label: approvePermission
     #   description: Testing approve permission
@@ -22,15 +22,15 @@ test:
     #   workload:
     #     module: workloads/approvePermission.js
 
-    - label: getRecordByIpfs
-      description: Testing health record retrieval from IPFS
-      txNumber: 10
-      rateControl:
-        type: fixed-rate
-        opts:
-          tps: 5
-      workload:
-        module: workloads/getRecordByIPFS.js
+    # - label: getRecordByIpfs
+    #   description: Testing health record retrieval from IPFS
+    #   txNumber: 100
+    #   rateControl:
+    #     type: fixed-rate
+    #     opts:
+    #       tps: 5
+    #   workload:
+    #     module: workloads/getRecordByIPFS.js
 
     # - label: getRecordsByCareProvider
     #   description: Testing health record retrieval from Care Provider
