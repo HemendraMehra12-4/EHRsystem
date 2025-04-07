@@ -128,13 +128,95 @@ scrape_configs:
     scheme: http
     static_configs:
       - targets: [newnode2:9545]
+
   - job_name: newnode3
-    crape_interval: 15s
+    scrape_interval: 15s
     scrape_timeout: 10s
     metrics_path: /metrics
     scheme: http
     static_configs:
-      - targets: [newnode3:9545]         
+      - targets: [newnode3:9545]
+
+  - job_name: newnode4
+    scrape_interval: 15s
+    scrape_timeout: 10s
+    metrics_path: /metrics
+    scheme: http
+    static_configs:
+      - targets: [newnode4:9545]
+
+  - job_name: newnode5
+    scrape_interval: 15s
+    scrape_timeout: 10s
+    metrics_path: /metrics
+    scheme: http
+    static_configs:
+      - targets: [newnode5:9545]
+
+  - job_name: newnode6
+    scrape_interval: 15s
+    scrape_timeout: 10s
+    metrics_path: /metrics
+    scheme: http
+    static_configs:
+      - targets: [newnode6:9545]
+
+  - job_name: newnode7
+    scrape_interval: 15s
+    scrape_timeout: 10s
+    metrics_path: /metrics
+    scheme: http
+    static_configs:
+      - targets: [newnode7:9545]
+
+  - job_name: newnode8
+    scrape_interval: 15s
+    scrape_timeout: 10s
+    metrics_path: /metrics
+    scheme: http
+    static_configs:
+      - targets: [newnode8:9545]
+
+  - job_name: newnode9
+    scrape_interval: 15s
+    scrape_timeout: 10s
+    metrics_path: /metrics
+    scheme: http
+    static_configs:
+      - targets: [newnode9:9545]
+
+  - job_name: newnode10
+    scrape_interval: 15s
+    scrape_timeout: 10s
+    metrics_path: /metrics
+    scheme: http
+    static_configs:
+      - targets: [newnode10:9545]
+
+  - job_name: newnode11
+    scrape_interval: 15s
+    scrape_timeout: 10s
+    metrics_path: /metrics
+    scheme: http
+    static_configs:
+      - targets: [newnode11:9545]
+
+  - job_name: newnode12
+    scrape_interval: 15s
+    scrape_timeout: 10s
+    metrics_path: /metrics
+    scheme: http
+    static_configs:
+      - targets: [newnode12:9545]
+
+  - job_name: newnode13
+    scrape_interval: 15s
+    scrape_timeout: 10s
+    metrics_path: /metrics
+    scheme: http
+    static_configs:
+      - targets: [newnode13:9545]
+        
 
   # all the nodes override themselves if given the same name
   # so we use dns based lookup and, replace labels to
