@@ -39,13 +39,77 @@
       {
         "address": "0x8h9i0j1k2l3m4n5o6p7q8r9s0t1a2b3c4d5e6f7g",
         "privateKey": "0xabcdef1234567890abcdef7890abcdef1234567890abcdef1234567890abcdef"
+      },
+      {
+        "address": "0x172dD1aC04b27f9582777C007e12b66A941B7e5E",
+        "privateKey": "ef2a038b804654fb9af2bc6315e9338fc0d1e67a7f2aa6b57e09d6e84e3a1595"
+      },
+      {
+        "address": "0x756d24FA2BAcCbdD159128543DaC468a8f43fd32",
+        "privateKey": "f38e2fd5901695eaf217894f90483ebc0047e2a61c366e2f9dad5c9301abebd3"
+      },
+      {
+        "address": "0xc1F88405f93b4032603308ED40a948F5FB014726",
+        "privateKey": "0dca229e9203e90e6a61b1e2fd1d227dd2567eb76ecfdd9ea8b392b078177696"
+      },
+      {
+        "address": "0xAdc680bB77d632B34EafEfA31DE517196Def6674",
+        "privateKey": "d4b33ac0762d7ca2e4d5b38c2657fae1cef43d4491cc5d5a81fd76ffcef0803c"
+      },
+      {
+        "address": "0xFaAddF679417d81997E6FE585CA4b4C1b65aaA25",
+        "privateKey": "17ed4dd9789f8f523f92f879731efbd89231e7f78bb867e5c75da889e5753725"
+      },
+      {
+        "address": "0x7599Ca046c18e7ECB5E342eF2c7677FD112b56A7",
+        "privateKey": "1c434bb63cd9db3322b1be882a2304e4bde92c94fd3fd3ef5397f8d09d06acd6"
+      },
+      {
+        "address": "0x4f3d533183Ab94647c45b02cB9B68Aad5493839B",
+        "privateKey": "3d2f548a345dadaa35bff77fb6ee50c4efd4c653296dfbfa2cd67d160bbd9bfb"
+      },
+      {
+        "address": "0x2d3A8ef34Ff3355d1Ef21e1374CEE680423Ce10F",
+        "privateKey": "81b83fc40a2f36947328c8e29b8b6ba609bbfd08e278241ad1fba5a40782013b"
+      },
+      {
+        "address": "0x4cC03c1Fb558891aeBC02b6961580B4736aF289e",
+        "privateKey": "9f4c5fcbbc54e42db9915ac78e46e54b3298b153f3a23b190a8118580cd6649e"
+      },
+      {
+        "address": "0xacC198525664F77E8C3b65697d3dDd0e47E21746",
+        "privateKey": "848a2b82a9366704d439f435aabfbdff05cf93948e87e8778b59af8c36d604a8"
+      },
+      {
+        "address": "0xb41EF4ce25f48FfBD03FB53C3BacC1D8d2ca2B08",
+        "privateKey": "0edf7a8303c99fdd122434d36a41041268ed953ecff3676fdf96eaebf8f73de6"
+      },
+      {
+        "address": "0x47Ea1dff8bbb8E648a92Ad67281eFfd3cc135Cb9",
+        "privateKey": "c4cc056a056d6c0520977f7e44feb0bccd5bce446ad5d33d8bacd9909ea7ee6d"
+      },
+      {
+        "address": "0x67C562c638bb34CFe36E1dc820F9408a39F7f05C",
+        "privateKey": "5c8961d26450f9c5cc315320adb59ac37377c3bc82d9cb7f7d903838ef58b8c3"
+      },
+      {
+        "address": "0xd3bA2A7D45e7Fa383D8472f6348754f26f9B47a8",
+        "privateKey": "a912d9a905dba4143cdbf64d038d3744debf858119b3f1f7d6b604a18463ba3a"
+      },
+      {
+        "address": "0xc5Ed7A73783601b5CA021E5d91d71B81A088705A",
+        "privateKey": "ef4efa4675697a7c116f80a7a9527a97b1498178100c2d1b14b8131c30f01061"
+      },
+      {
+        "address": "0x435A197BB94d386B1bd96Bf2cf4582CdE9d9f264",
+        "privateKey": "34b478bd123834d7fd7df8edcec2d1ef35bd3ce38bd03141ad17453ecc31571c"
       }
     ],
     "transactionConfirmationBlocks": 2,
     "nonces": true,
     "contracts": {
       "EHRmain": {
-        "address": "0xa50a51c09a5c451C52BB714527E1974b686D8e77",
+        "address": "0x42699A7612A82f1d9C36148af9C77354759b210b",
         "estimateGas": false,
         "gas": {
           "addPHRData": 1000000,

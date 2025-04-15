@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/home/subrajeet/Projects/EHRsystem/dapps/digiArogya/contracts/EHRmain.sol": {
-      "lastModificationDate": 1743498893462,
-      "contentHash": "880f61bff0eb9d01e2e76ce6b29987e4",
+      "lastModificationDate": 1743500688396,
+      "contentHash": "02193d9f41929bce3b171ebda673c3e4",
       "sourceName": "contracts/EHRmain.sol",
       "solcConfig": {
         "version": "0.8.19",

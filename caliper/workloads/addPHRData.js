@@ -47,13 +47,13 @@ class AddPHRDataWorkload extends WorkloadModuleBase {
     const startTime = Date.now();
     await this.sutAdapter.sendRequests(request);
 
+    const totalTxns = 1000; // Change this based on the simple-benchmark.yaml file
     const endTime = Date.now();
     const latencyMs = endTime - startTime;
     const latencySec = latencyMs / 1000;
-    const throughput = latencySec > 0 ? 1 / latencySec : 0;
+    const throughput = latencySec > 0 ? totalTxns / latencySec : 0;
 
     this.results.push({
-      txnID: this.txIndex,
       latency: latencyMs,
       throughput: throughput,
       algorithm: this.algorithm,
@@ -61,24 +61,19 @@ class AddPHRDataWorkload extends WorkloadModuleBase {
   }
 
   async cleanupWorkloadModule() {
-    // Updated CSV header with Algorithm field
-    const csvHeader = "txnID,Latency(ms),Throughput(TPS),Algorithm\n";
+    const csvHeader = "Latency(ms),Throughput(TPS),Algorithm\n";
     const csvRows = this.results
       .map(
         (r) =>
-          `${r.txnID},${r.latency.toFixed(2)},${r.throughput.toFixed(2)},${
-            r.algorithm
-          }`
+          `${r.latency.toFixed(2)},${r.throughput.toFixed(2)},${r.algorithm}`
       )
       .join("\n");
 
-    // fs.writeFileSync("benchmark_result.csv", csvHeader + csvRows);
     if (!fs.existsSync("benchmark_result.csv")) {
       fs.writeFileSync("benchmark_result.csv", csvHeader + csvRows);
     } else {
       fs.appendFileSync("benchmark_result.csv", csvRows + "\n");
     }
-    // console.log(csvRows);
   }
 }
 

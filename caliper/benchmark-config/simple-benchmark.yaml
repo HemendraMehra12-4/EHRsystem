@@ -1,83 +1,23 @@
 test:
   workers:
-    number: 8
+    number: 24
   rounds:
-    - label: addPHRData
-      description: Testing adding Personal Health Records
-      txNumber: 200
+    # - label: addPHRData
+    #   description: Testing adding Personal Health Records
+    #   txNumber: 200
+    #   rateControl:
+    #     type: fixed-rate
+    #     opts:
+    #       tps: 5
+    #   workload:
+    #     module: workloads/addPHRData.js
+
+    - label: getRecordByIpfs
+      description: Testing health record retrieval from IPFS
+      txNumber: 10
       rateControl:
         type: fixed-rate
         opts:
           tps: 5
       workload:
-        module: workloads/addPHRData.js
-
-    # - label: approvePermission
-    #   description: Testing approve permission
-    #   txNumber: 100
-    #   rateControl:
-    #     type: fixed-rate
-    #     opts:
-    #       tps: 5
-    #   workload:
-    #     module: workloads/approvePermission.js
-
-    # - label: getRecordByIpfs
-    #   description: Testing health record retrieval from IPFS
-    #   txNumber: 100
-    #   rateControl:
-    #     type: fixed-rate
-    #     opts:
-    #       tps: 5
-    #   workload:
-    #     module: workloads/getRecordByIPFS.js
-
-    # - label: getRecordsByCareProvider
-    #   description: Testing health record retrieval from Care Provider
-    #   txNumber: 150
-    #   rateControl:
-    #     type: fixed-rate
-    #     opts:
-    #       tps: 3
-    #   workload:
-    #     module: workloads/getRecordsByCareProvider.js
-
-    # - label: getRecordsByOwner
-    #   description: Testing health record retrieval from Owner
-    #   txNumber: 80
-    #   rateControl:
-    #     type: fixed-rate`Qm${Math.floor(Math.random() * 1e16).toString(36)}`;
-    #     opts:
-    #       tps: 4
-    #   workload:
-    #     module: workloads/getRecordsByOwner.js
-
-    # - label: getRecordsForResearcher
-    #   description: Testing health record retrieval for Researcher
-    #   txNumber: 100
-    #   rateControl:
-    #     type: fixed-rate
-    #     opts:
-    #       tps: 5
-    #   workload:
-    #     module: workloads/getRecordsForResearcher.js
-
-    # - label: registerUser
-    #   description: Registering a new user
-    #   txNumber: 10
-    #   rateControl:
-    #     type: fixed-rate
-    #     opts:
-    #       tps: 1
-    #   workload:
-    #     module: workloads/registerUser.js
-
-    # - label: requestPermission
-    #   description: Testing request permission
-    #   txNumber: 100
-    #   rateControl:
-    #     type: fixed-rate
-    #     opts:
-    #       tps: 5
-    #   workload:
-    #     module: workloads/requestPermission.js
+        module: workloads/getRecordByIPFS.js
