@@ -926,3 +926,39 @@
 06:48:29.831576 db@open done T·24.7629ms
 06:53:35.978179 db@close closing
 06:53:35.981540 db@close done T·3.388731ms
+=============== Apr 16, 2025 (UTC) ===============
+08:49:15.352996 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+08:49:15.394882 version@stat F·[2 1] S·23KiB[15KiB 8KiB] Sc·[0.50 0.00]
+08:49:15.394949 db@open opening
+08:49:15.395097 journal@recovery F·1
+08:49:15.396658 journal@recovery recovering @332
+08:49:15.399405 memdb@flush created L0@334 N·9 S·8KiB "/F5..2GQ,v489":"/pr..6RU,v493"
+08:49:15.406282 version@stat F·[3 1] S·32KiB[23KiB 8KiB] Sc·[0.75 0.00]
+08:49:15.416579 db@janitor F·11 G·4
+08:49:15.416805 db@janitor removing table-360
+08:49:15.417149 db@janitor removing table-363
+08:49:15.417392 db@janitor removing table-366
+08:49:15.417636 db@janitor removing table-359
+08:49:15.417913 db@open done T·22.946226ms
+08:55:50.846897 db@close closing
+08:55:50.853391 db@close done T·6.492882ms
+=============== Apr 16, 2025 (UTC) ===============
+08:57:39.929360 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+08:57:39.931221 version@stat F·[3 1] S·32KiB[23KiB 8KiB] Sc·[0.75 0.00]
+08:57:39.931281 db@open opening
+08:57:39.932859 journal@recovery F·1
+08:57:39.936301 journal@recovery recovering @335
+08:57:39.950523 memdb@flush created L0@337 N·13 S·8KiB "/F5..2GQ,v499":"/pr..6RU,v509"
+08:57:39.950800 version@stat F·[4 1] S·40KiB[32KiB 8KiB] Sc·[1.00 0.00]
+08:57:39.991516 db@janitor F·8 G·0
+08:57:39.991570 db@open done T·60.272152ms
+08:57:40.006913 table@compaction L0·4 -> L1·1 S·40KiB Q·510
+08:57:40.019727 table@build created L1@340 N·21 S·9KiB "/F5..2GQ,v499":"/pr..6RU,v493"
+08:57:40.019843 version@stat F·[0 1] S·9KiB[0B 9KiB] Sc·[0.00 0.00]
+08:57:40.027742 table@compaction committed F-4 S-31KiB Ke·0 D·23 T·20.757683ms
+08:57:40.027941 table@remove removed @334
+08:57:40.031772 table@remove removed @331
+08:57:40.038399 table@remove removed @328
+08:57:40.038688 table@remove removed @327
+09:02:09.785778 db@close closing
+09:02:09.792693 db@close done T·7.321567ms

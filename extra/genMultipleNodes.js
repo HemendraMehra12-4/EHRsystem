@@ -7,7 +7,7 @@ const Wallet = require("ethereumjs-wallet");
 const yargs = require("yargs/yargs");
 
 const n = 10; // number of nodes
-const startIP = 44; // Starting IP address for nodes
+const startIP = 154; // Starting IP address for nodes
 const staticNodesFile = path.join(__dirname, "static-nodes.json");
 const permissionConfigFile = path.join(__dirname, "permissions_config.toml");
 
